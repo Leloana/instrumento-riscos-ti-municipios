@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_2023041107296" targetNamespace="http://www.bizagi.com/definitions/_2023041107296" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.6.1">
+  <dataStore id="Id_c9458203-af61-4792-9ded-a42bd20e1120" name="Base Histórica de Riscos">
+    <documentation />
+    <dataState id="Id_44e120b3-9994-4570-bdbb-957d08469096" name="" />
+  </dataStore>
+  <process id="Id_287a32db-0590-4d1a-8f6b-9d37836a7d2f" name="Processo de Gerenciamento dos Riscos - Criar Plano de Tratamento dos Riscos">
+    <documentation />
+    <laneSet id="Id_e8dada83-0442-425a-a075-9036b520aba6" />
+    <dataObject id="Id_4bf58e07-76f8-4c1e-ac11-3d8141783a89" name="Contexto">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <dataState id="Id_e3263de7-0bc7-4627-85ee-114f01279903" />
+    </dataObject>
+    <dataObject id="Id_4239769d-a47c-4ef2-9078-48a446384796" name="Plano de Tratamento dos Riscos">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <dataState id="Id_0f401931-f2df-4262-ae82-ffae653df370" />
+    </dataObject>
+    <dataObject id="Id_9adff955-9f61-41bf-8b34-8ccb07177ea0" name="Lista de Riscos">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <dataState id="Id_13b83fc4-7765-4800-b864-908509950ee2" />
+    </dataObject>
+    <dataObject id="Id_2d932a1d-57dc-4c4c-b3a4-62ae81db1f35" name="Lista de Riscos x Probabilidade x Impacto">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <dataState id="Id_1d744fde-917a-4540-b8c0-8b1a2ff1e7c3" />
+    </dataObject>
+    <dataObject id="Id_467fc466-7a41-4b13-8c8c-bc10eebc5205" name="Lista de Riscos x Probabilidade x Impacto x Estratégia">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <dataState id="Id_871a2e8f-ab0a-4ab5-a585-606198396012" />
+    </dataObject>
+    <dataStoreReference id="Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367" name="Dados dos Riscos (EAR)" dataStoreRef="Id_c9458203-af61-4792-9ded-a42bd20e1120">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F0F0F0" />
+            <bizagi:BizagiProperty name="borderColor" value="#666666" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </dataStoreReference>
+    <task id="Id_fb177bd8-af0c-497e-a8ac-fac0e5093c36" name="Definir Contexto">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;PASSO 1&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;O passo inicial para se estabelecer o contexto &amp;eacute; analisar o ambiente interno e o ambiente externo &amp;nbsp;em &amp;nbsp;que &amp;nbsp;est&amp;aacute; &amp;nbsp;inserida a organiza&amp;ccedil;&amp;atilde;o que &amp;nbsp;esteja &amp;nbsp;sendo avaliada quanto aos riscos existentes, ou mesmo um projeto espec&amp;iacute;fico. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Para &amp;nbsp;analisar &amp;nbsp;diretamente &amp;nbsp;os &amp;nbsp;fatores &amp;nbsp;internos &amp;nbsp;e &amp;nbsp;externos &amp;nbsp;que &amp;nbsp;impactam &amp;nbsp;na organiza&amp;ccedil;&amp;atilde;o ou na &amp;nbsp;execu&amp;ccedil;&amp;atilde;o &amp;nbsp;de determinado projeto, faz-se necess&amp;aacute;rio relacionar esses fatores. A ferramenta mais indicada para relacionar esses fatores &amp;eacute; a Matriz SWOT.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Devemos ter uma Matriz SWOT geral, ou seja, para a organiza&amp;ccedil;&amp;atilde;o toda, e podemos criar uma matriz espec&amp;iacute;fica para cada projeto, tendo sempre como base a matriz da organiza&amp;ccedil;&amp;atilde;o, ou seja, especializ&amp;aacute;-la para cada projeto.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;Pontos Fortes&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;O que voc&amp;ecirc; faz bem? &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Que recursos especiais voc&amp;ecirc; possui e pode aproveitar?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;Pontos Fracos&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;No que voc&amp;ecirc; pode melhorar?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Onde voc&amp;ecirc; tem menos recursos que os outros?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;O que os outros acham que s&amp;atilde;o suas fraquezas?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;Oportunidades&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Quais s&amp;atilde;o as oportunidades externas que voc&amp;ecirc; pode identificar?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Que tend&amp;ecirc;ncias e &amp;quot;modas&amp;quot; voc&amp;ecirc; pode aproveitar em seu favor?&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;Amea&amp;ccedil;as&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Que amea&amp;ccedil;as (leis, regulamentos, outros) podem lhe prejudicar? &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Passo 2&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;DENTIFICAR AS PATES INTERESSADAS E PARTES ENVOLVIDAS.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Passo 3&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Compreender &amp;nbsp;de &amp;nbsp;forma &amp;nbsp;geral &amp;nbsp;como &amp;nbsp;determinado &amp;nbsp;processo &amp;nbsp;ou &amp;nbsp;atividade &amp;nbsp;&amp;eacute; realizado &amp;nbsp;para, posteriormente, levantar os ativos &amp;nbsp;envolvidos &amp;nbsp;para &amp;nbsp; identificar &amp;nbsp;poss&amp;iacute;veis problemas que podem ocorrer durante a sua realiza&amp;ccedil;&amp;atilde;o. Esses poss&amp;iacute;veis problemas ser&amp;atilde;o classificados como poss&amp;iacute;veis eventos de riscos. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Passo 4&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;FAZER O LEVANTAMENTO DE ATIVOS . Para cada ativo identificado, fazer um descri&amp;ccedil;&amp;atilde;o do mesmo, relatando como ele pode interferir ser uma fonte de riscos. Os ativos podem ser classificados como:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Pessoas;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Processos;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Patrim&amp;ocirc;nio;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Tecnologia;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Outros.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_1800df1e-35f4-4e2a-8df1-0086ec4fcbd3</incoming>
+      <outgoing>Id_86952a86-6b61-4fe3-954c-3a0a259beef5</outgoing>
+      <ioSpecification id="Id_8eeb3f8f-709d-4f01-9368-cd873d11a01b">
+        <dataOutput id="Id_d0d91bfa-29ed-429a-b072-ff6193bc2480">
+          <documentation />
+          <dataState id="Id_1ccb9ce8-0a08-4042-beba-70dda31f8f4a" />
+        </dataOutput>
+        <inputSet id="Id_09c8907c-22d9-4683-b090-a72541602669" />
+        <outputSet id="Id_71df4690-6772-4173-abfa-621d73e07de6">
+          <dataOutputRefs>Id_d0d91bfa-29ed-429a-b072-ff6193bc2480</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation id="Id_3b8f7412-6f6b-42a0-a243-9d000010b58c">
+        <documentation />
+        <sourceRef>Id_d0d91bfa-29ed-429a-b072-ff6193bc2480</sourceRef>
+        <targetRef>Id_4bf58e07-76f8-4c1e-ac11-3d8141783a89</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="Id_602bb177-a003-4925-8df2-c4e69d2d2645" name="Identificar Riscos">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;a name="_dx_frag_StartFragment"&gt;&lt;/a&gt;&lt;span style="color:#000000;background-color:#FFFFFF;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;A identifica&amp;ccedil;&amp;atilde;o do risco de TIC compreende o reconhecimento e descri&amp;ccedil;&amp;atilde;o dos riscos de TIC relacionados a um objeto de gest&amp;atilde;o, envolvendo a identifica&amp;ccedil;&amp;atilde;o de poss&amp;iacute;veis fontes de riscos, eventos, causas e consequ&amp;ecirc;ncias.&lt;/span&gt;&lt;a name="_dx_frag_EndFragment"&gt;&lt;/a&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#222222;background-color:#FFFFFF;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Uma lista abrangente de todos riscos identificados deve ser criada, incluindo para cada risco, as fontes e eventos de risco que possam ter algum impacto na consecu&amp;ccedil;&amp;atilde;o dos objetivos e resultados identificados na etapa de estabelecimento do contexto.&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Pode-se consultar a Base Hist&amp;oacute;rica de Riscos para indentificar os riscos do objeto em discuss&amp;atilde;o.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;T&amp;eacute;cnicas que podem ser usadas:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Brainstorming&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Diagrama de Causa Efeito&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;-&amp;nbsp;An&amp;aacute;lise &amp;nbsp;de &amp;nbsp;Modos &amp;nbsp;de &amp;nbsp;Falhas &amp;nbsp;e &amp;nbsp;Efeitos: FMEA (Failure &amp;nbsp;Mode &amp;nbsp;and &amp;nbsp;Effect &amp;nbsp;Analysis)&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;- Entrevista e Julgamento de Especialistas&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_86952a86-6b61-4fe3-954c-3a0a259beef5</incoming>
+      <outgoing>Id_02c21ef3-1d91-4855-aeb7-c82bba8e8129</outgoing>
+      <ioSpecification id="Id_f2e4e588-6c7e-4259-b7cd-0e2e6040ba2d">
+        <dataOutput id="Id_400fd88a-76d9-4ab1-bce9-c35c6a9cdce5">
+          <documentation />
+          <dataState id="Id_f6a37ad9-9c3d-42e6-9d56-f48f2547b12d" />
+        </dataOutput>
+        <dataOutput id="Id_11281b14-5e95-4900-98e8-077bd96e8ac0">
+          <documentation />
+          <dataState id="Id_9f7f6015-fd16-4cd8-a8b9-afec4e445c32" />
+        </dataOutput>
+        <inputSet id="Id_763298a5-86cd-4db6-ba9a-fd65f5594905" />
+        <outputSet id="Id_3dbfd494-74dd-45a6-8074-20c41e8469b1">
+          <dataOutputRefs>Id_400fd88a-76d9-4ab1-bce9-c35c6a9cdce5</dataOutputRefs>
+          <dataOutputRefs>Id_11281b14-5e95-4900-98e8-077bd96e8ac0</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation id="Id_787e288d-f9f0-4e09-8b9c-799fcf8a70f3">
+        <documentation />
+        <sourceRef>Id_400fd88a-76d9-4ab1-bce9-c35c6a9cdce5</sourceRef>
+        <targetRef>Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation id="Id_248627d4-42bb-46b9-951b-30c030b3395b">
+        <documentation />
+        <sourceRef>Id_11281b14-5e95-4900-98e8-077bd96e8ac0</sourceRef>
+        <targetRef>Id_9adff955-9f61-41bf-8b34-8ccb07177ea0</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation id="DataOutputAssociation_0zyj0dd">
+        <targetRef>Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="Id_728c3a50-c266-4182-9a3b-c3342b003db5" name="Analisar Riscos">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;a name="_dx_frag_StartFragment"&gt;&lt;/a&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;O m&amp;eacute;todo para an&amp;aacute;lise de riscos, se baseia em duas caracter&amp;iacute;sticas dos potenciais problemas: a Probabilidade e o Impacto.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;1 - A Probabilidade de ocorr&amp;ecirc;ncia de determinada situa&amp;ccedil;&amp;atilde;o de risco &amp;eacute; verificada por meio de uma &amp;nbsp;estimativa &amp;nbsp;da &amp;nbsp;incerteza &amp;nbsp;se &amp;nbsp;concretizar. &amp;nbsp;&amp;Eacute; &amp;nbsp;a &amp;nbsp;probabilidade &amp;nbsp;de &amp;nbsp;que &amp;nbsp;o &amp;nbsp;potencial &amp;nbsp;problema &amp;nbsp;ir&amp;aacute; ocorrer. Pode-se &amp;nbsp;partir &amp;nbsp;de &amp;nbsp;relat&amp;oacute;rios &amp;nbsp;e &amp;nbsp;registros &amp;nbsp;de ocorr&amp;ecirc;ncias &amp;nbsp;pr&amp;eacute;-existentes &amp;nbsp;e &amp;nbsp;tamb&amp;eacute;m &amp;nbsp;da &amp;nbsp;avalia&amp;ccedil;&amp;atilde;o &amp;nbsp;dos &amp;nbsp;contro (Banco de Dados Hist&amp;oacute;rico). &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;2 - O Impacto &amp;eacute; a consequ&amp;ecirc;ncia da ocorr&amp;ecirc;ncia do risco para o objetivo organizacional ou projeto sendo avaliado e a relev&amp;acirc;ncia ou valor que o ativo possui &amp;nbsp;para &amp;nbsp;a &amp;nbsp;organiza&amp;ccedil;&amp;atilde;o. &amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Com os riscos identificados, com as respectivas causas e consequ&amp;ecirc;ncias relacionadas, come&amp;ccedil;a a &amp;nbsp;etapa &amp;nbsp;de &amp;nbsp;an&amp;aacute;lise &amp;nbsp;dos &amp;nbsp;riscos &amp;nbsp;com &amp;nbsp;base &amp;nbsp;nos &amp;nbsp;crit&amp;eacute;rios &amp;nbsp;pr&amp;eacute;-definidos &amp;nbsp;de probabilidade &amp;nbsp;de ocorr&amp;ecirc;ncia, e impacto das consequ&amp;ecirc;ncias, conforme definido na Pol&amp;iacute;tica de Gest&amp;atilde;o de Riscos. O produto final da an&amp;aacute;lise de riscos ser&amp;aacute; a Matriz de Riscos. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;A Matriz &amp;nbsp;de Riscos &amp;nbsp;(ou &amp;nbsp;Matriz &amp;nbsp;de &amp;nbsp;Probabilidade &amp;nbsp;x &amp;nbsp;Impacto) &amp;eacute; um documento &amp;nbsp;que &amp;nbsp;especifica combina&amp;ccedil;&amp;otilde;es &amp;nbsp;de &amp;nbsp;probabilidade &amp;nbsp;de &amp;nbsp;ocorr&amp;ecirc;ncia &amp;nbsp;de &amp;nbsp;um &amp;nbsp;risco &amp;nbsp;e &amp;nbsp;do &amp;nbsp;impacto &amp;nbsp;causado &amp;nbsp;por &amp;nbsp;sua ocorr&amp;ecirc;ncia, &amp;nbsp;permitindo &amp;nbsp;assim &amp;nbsp;calcular o n&amp;iacute;vel de risco &amp;nbsp;a &amp;nbsp;partir &amp;nbsp;da &amp;nbsp;multiplica&amp;ccedil;&amp;atilde;o &amp;nbsp;dos &amp;nbsp;valores atribu&amp;iacute;dos &amp;agrave; probabilidade e ao impacto. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;img src="data:image/png;base64,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" width="761" height="308" alt="" style="border-width:0px;" /&gt;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_02c21ef3-1d91-4855-aeb7-c82bba8e8129</incoming>
+      <outgoing>Id_24e73458-2bd6-4b8b-9cc2-fd8c49fa1df8</outgoing>
+      <ioSpecification id="Id_66ec7d4e-6e3c-40e9-9527-0b6919b637cf">
+        <dataOutput id="Id_85005bc2-ca98-47c5-bfa6-fa5f3342b829">
+          <documentation />
+          <dataState id="Id_8c6d01e2-9ced-4015-b059-a06a20d72899" />
+        </dataOutput>
+        <inputSet id="Id_f062ca86-2bf9-462f-9f9d-186174d422b5" />
+        <outputSet id="Id_a1059f82-7d09-4ac9-a88e-81f6630b8bb5">
+          <dataOutputRefs>Id_85005bc2-ca98-47c5-bfa6-fa5f3342b829</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation id="Id_f9c68d20-7143-4d90-9e96-1611728bd85c">
+        <documentation />
+        <sourceRef>Id_85005bc2-ca98-47c5-bfa6-fa5f3342b829</sourceRef>
+        <targetRef>Id_2d932a1d-57dc-4c4c-b3a4-62ae81db1f35</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="Id_58a12131-dbd5-4985-b2da-e9b3015a5c7f" name="Avaliar Riscos">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Finalizada a an&amp;aacute;lise dos eventos de risco quanto &amp;agrave; probabilidade de ocorr&amp;ecirc;ncia e o impacto, &amp;eacute; necess&amp;aacute;rio avaliar os riscos em rela&amp;ccedil;&amp;atilde;o ao seu n&amp;iacute;vel. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Essa etapa faz uso da compreens&amp;atilde;o dos riscos, obtida atrav&amp;eacute;s da an&amp;aacute;lise, para a tomada de decis&amp;otilde;es sobre a prioriza&amp;ccedil;&amp;atilde;o de futuras a&amp;ccedil;&amp;otilde;es &amp;nbsp;que &amp;nbsp;ser&amp;atilde;o &amp;nbsp;tomadas &amp;nbsp;para eliminar &amp;nbsp;ou &amp;nbsp;reduzir &amp;nbsp;a &amp;nbsp;ocorr&amp;ecirc;ncia &amp;nbsp;e &amp;nbsp;o &amp;nbsp;impacto &amp;nbsp;dos &amp;nbsp;riscos identificados. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Segundo a Pol&amp;iacute;tica de Gest&amp;atilde;o de Riscos, as poss&amp;iacute;veis estrat&amp;eacute;gias s&amp;atilde;o:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:11pt;font-weight:bold;font-style:normal;"&gt;Estrat&amp;eacute;gia de RESPOSTA AO RISCO&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:11pt;font-weight:bold;font-style:normal;"&gt;DESCRI&amp;Ccedil;&amp;Atilde;O&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:11pt;font-weight:bold;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Evitar&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Inclui &amp;nbsp;como &amp;nbsp;consequ&amp;ecirc;ncia a descontinua&amp;ccedil;&amp;atilde;o das &amp;nbsp;atividades &amp;nbsp;que &amp;nbsp;geram &amp;nbsp;os &amp;nbsp;riscos. &amp;nbsp;Evitar riscos pode implicar a descontinua&amp;ccedil;&amp;atilde;o de um software, a aliena&amp;ccedil;&amp;atilde;o de um equipamento ou a &amp;nbsp;extin&amp;ccedil;&amp;atilde;o &amp;nbsp;de &amp;nbsp;uma &amp;nbsp;divis&amp;atilde;o &amp;nbsp;ou &amp;nbsp;processo &amp;nbsp;de trabalho. &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Mitigar&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;S&amp;atilde;o &amp;nbsp;&amp;nbsp;adotadas &amp;nbsp;&amp;nbsp;medidas &amp;nbsp;&amp;nbsp;para reduzir &amp;nbsp;a probabilidade ou o impacto dos riscos.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Compartilhar&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Redu&amp;ccedil;&amp;atilde;o da probabilidade ou do impacto dos riscos &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;pela transfer&amp;ecirc;ncia &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ou &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;pelo compartilhamento &amp;nbsp;de &amp;nbsp;uma por&amp;ccedil;&amp;atilde;o &amp;nbsp;do &amp;nbsp;risco. As &amp;nbsp;&amp;nbsp;&amp;nbsp;t&amp;eacute;cnicas &amp;nbsp;&amp;nbsp;&amp;nbsp;comuns &amp;nbsp;&amp;nbsp;&amp;nbsp;compreendem &amp;nbsp;&amp;nbsp;&amp;nbsp;a aquisi&amp;ccedil;&amp;atilde;o &amp;nbsp;&amp;nbsp;de produtos &amp;nbsp;de &amp;nbsp;seguro &amp;nbsp;&amp;nbsp;ou &amp;nbsp;&amp;nbsp;a terceiriza&amp;ccedil;&amp;atilde;o de uma atividade. &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Aceitar &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Quando &amp;nbsp;o &amp;nbsp;n&amp;iacute;vel &amp;nbsp;de &amp;nbsp;risco &amp;nbsp;for &amp;nbsp;baixo &amp;nbsp;ou &amp;nbsp;muito baixo, &amp;nbsp;&amp;nbsp;o risco &amp;nbsp;residual n&amp;atilde;o &amp;nbsp;&amp;nbsp;justifica &amp;nbsp;&amp;nbsp;a implementa&amp;ccedil;&amp;atilde;o &amp;nbsp;&amp;nbsp;de novos controles &amp;nbsp;&amp;nbsp;para mitig&amp;aacute;-lo, &amp;nbsp;em &amp;nbsp;uma &amp;nbsp;vis&amp;atilde;o &amp;nbsp;custo &amp;nbsp;benef&amp;iacute;cio. Podendo ser aceitos pelo gestor. &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td valign="top" width="161" style="width:120.75pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Assumir &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td valign="top" width="708" style="width:531pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:1pt #000000 solid;border-right:1pt #000000 solid;border-bottom:1pt #000000 solid;border-left:1pt #000000 solid;"&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:10pt;font-weight:normal;font-style:normal;"&gt;Nenhuma &amp;nbsp;medida &amp;nbsp;&amp;eacute; &amp;nbsp;adotada &amp;nbsp;para &amp;nbsp;afetar &amp;nbsp;a probabilidade &amp;nbsp;ou &amp;nbsp;o &amp;nbsp;impacto, &amp;nbsp;visto &amp;nbsp;que &amp;nbsp;o gestor &amp;nbsp;decide &amp;nbsp;assumir em &amp;nbsp;prol &amp;nbsp;de &amp;nbsp;outro benef&amp;iacute;cio. &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;/table&gt;
+	&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ainda Segundo a Pol&amp;iacute;tica de Gest&amp;atilde;o de Riscos, a princ&amp;iacute;pio, a rela&amp;ccedil;&amp;atilde;o toler&amp;acirc;ncia ao risco x n&amp;iacute;vel do risco, que ir&amp;aacute; definir a estrt&amp;eacute;gia, dever&amp;aacute; seguir a classifica&amp;ccedil;&amp;atilde;o abaixo: &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Riscos &amp;nbsp;Inaceit&amp;aacute;veis&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;: &amp;nbsp;dever&amp;atilde;o &amp;nbsp;ser &amp;nbsp;priorizados &amp;nbsp;quanto &amp;nbsp;ao &amp;nbsp;tratamento, &amp;nbsp;adotando-se &amp;nbsp;as estrat&amp;eacute;gias de &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;evitar&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt; ou &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;mitigar&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;, n&amp;atilde;o havendo necessidade de se analisar o custo-benef&amp;iacute;cio da &amp;nbsp;aplica&amp;ccedil;&amp;atilde;o &amp;nbsp;de &amp;nbsp;controles, &amp;nbsp;pois &amp;nbsp;as &amp;nbsp;consequ&amp;ecirc;ncias &amp;nbsp;da &amp;nbsp;ocorr&amp;ecirc;ncia &amp;nbsp;dos &amp;nbsp;eventos &amp;nbsp;de &amp;nbsp;risco suplantam os custos envolvidos no controle; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Riscos Toler&amp;aacute;veis&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;: podem ser priorizados quanto ao tratamento, adotando-se as estrat&amp;eacute;gias de &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;mitigar&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt; &amp;nbsp;ou &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;compartilhar&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;, &amp;nbsp;por&amp;eacute;m &amp;nbsp;devem &amp;nbsp;passar &amp;nbsp;por &amp;nbsp;an&amp;aacute;lise &amp;nbsp;de &amp;nbsp;custo-benef&amp;iacute;cio &amp;nbsp;quanto &amp;nbsp;&amp;agrave; necessidade de aplica&amp;ccedil;&amp;atilde;o de controles, tomando como diretriz reduzir os n&amp;iacute;veis de risco ao m&amp;aacute;ximo poss&amp;iacute;vel sem altos custos; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:bold;font-style:normal;text-decoration: underline;"&gt;Riscos &amp;nbsp;Aceit&amp;aacute;veis&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;: &amp;nbsp;s&amp;atilde;o &amp;nbsp;riscos &amp;nbsp;que &amp;nbsp;a &amp;nbsp;princ&amp;iacute;pio &amp;nbsp;s&amp;atilde;o &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;text-decoration: underline;"&gt;aceitos&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;, &amp;nbsp;n&amp;atilde;o &amp;nbsp;havendo necessidade &amp;nbsp;de &amp;nbsp;tratamento &amp;nbsp;imediato, &amp;nbsp;devendo &amp;nbsp;apenas ser &amp;nbsp;reconhecidos &amp;nbsp;e &amp;nbsp;monitorados quanto &amp;nbsp;&amp;agrave;s &amp;nbsp;ocorr&amp;ecirc;ncias &amp;nbsp;e &amp;nbsp;poss&amp;iacute;veis &amp;nbsp;consequ&amp;ecirc;ncias, &amp;nbsp;sobretudo &amp;nbsp;para &amp;nbsp;se &amp;nbsp;evitar &amp;nbsp;efeitos cumulativos com outros riscos. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;img src="data:image/png;base64,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" width="593" height="285" alt="" style="border-width:0px;" /&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_24e73458-2bd6-4b8b-9cc2-fd8c49fa1df8</incoming>
+      <outgoing>Id_38a4b6f0-f0a1-4821-bb4c-4a4b4c6acb32</outgoing>
+      <ioSpecification id="Id_1a4bdf3d-fca0-4025-8495-1cbf835b0967">
+        <dataOutput id="Id_6c6c3965-b568-40ab-b6fd-8d9db121598e">
+          <documentation />
+          <dataState id="Id_49da5cca-f2b3-4b92-957a-bb6fc6810df0" />
+        </dataOutput>
+        <inputSet id="Id_8da82dae-2e2c-4189-9f88-e43fcc3be07a" />
+        <outputSet id="Id_fd940c81-1eab-4cf7-9c74-e2150a6a7bcf">
+          <dataOutputRefs>Id_6c6c3965-b568-40ab-b6fd-8d9db121598e</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation id="Id_fe04f68b-b44b-4618-a157-c894b7e6a2d9">
+        <documentation />
+        <sourceRef>Id_6c6c3965-b568-40ab-b6fd-8d9db121598e</sourceRef>
+        <targetRef>Id_467fc466-7a41-4b13-8c8c-bc10eebc5205</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="Id_fa6295fe-8250-4228-9b2b-679cc0a7ff5b" name="Criar Plano de Tratamento dos Riscos">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;a name="_dx_frag_StartFragment"&gt;&lt;/a&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Essa &amp;nbsp;etapa &amp;nbsp;ser&amp;aacute; respons&amp;aacute;vel &amp;nbsp;pela &amp;nbsp;sele&amp;ccedil;&amp;atilde;o &amp;nbsp;e &amp;nbsp;implementa&amp;ccedil;&amp;atilde;o &amp;nbsp;de &amp;nbsp;uma &amp;nbsp;ou mais &amp;nbsp;a&amp;ccedil;&amp;otilde;es &amp;nbsp;de &amp;nbsp;tratamento &amp;nbsp;para modificar os n&amp;iacute;veis de riscos, ou seja, diminuir a probabilidade e impacto do mesmo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;De acordo com a Pol&amp;iacute;tica de Gest&amp;atilde;o de Riscos, o plano deve conter, pelo menos, as seguintes informa&amp;ccedil;&amp;otilde;es:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;a justificativa para a sele&amp;ccedil;&amp;atilde;o das op&amp;ccedil;&amp;otilde;es de tratamento, incluindo os benef&amp;iacute;cios esperados a serem obtidos;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;aqueles que s&amp;atilde;o responsabiliz&amp;aacute;veis e respons&amp;aacute;veis por aprovar e implementar o plano;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;as a&amp;ccedil;&amp;otilde;es propostas;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;os recursos requeridos, incluindo conting&amp;ecirc;ncias;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;as medidas de desempenho;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;as restri&amp;ccedil;&amp;otilde;es;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;os relatos e monitoramento requeridos;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;quando se espera que a&amp;ccedil;&amp;otilde;es sejam tomadas e conclu&amp;iacute;das.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_38a4b6f0-f0a1-4821-bb4c-4a4b4c6acb32</incoming>
+      <outgoing>Id_a66497c5-ec5d-4409-b2df-ee4f76aa6bdd</outgoing>
+      <ioSpecification id="Id_01de6340-ca9a-4e76-8681-568d8c94eea7">
+        <dataOutput id="Id_803ef223-ec44-4a23-b83b-8852183f5514">
+          <documentation />
+          <dataState id="Id_095c5526-193f-497b-a447-68e825b284fe" />
+        </dataOutput>
+        <dataOutput id="Id_ce1bae56-1612-4fa1-93b0-c19b953379fc">
+          <documentation />
+          <dataState id="Id_7dc6e37a-dbac-45fe-91f4-21b5fcff367b" />
+        </dataOutput>
+        <inputSet id="Id_4fd6fc19-005e-4f9b-9e7b-f930b2ca0da1" />
+        <outputSet id="Id_db37ea8e-1902-47c5-82e7-4c80b7312eb7">
+          <dataOutputRefs>Id_803ef223-ec44-4a23-b83b-8852183f5514</dataOutputRefs>
+          <dataOutputRefs>Id_ce1bae56-1612-4fa1-93b0-c19b953379fc</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation id="Id_73c3e46a-c783-48cb-bd66-a5e410f73435">
+        <documentation />
+        <sourceRef>Id_803ef223-ec44-4a23-b83b-8852183f5514</sourceRef>
+        <targetRef>Id_4239769d-a47c-4ef2-9078-48a446384796</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation id="Id_018af5fe-1adf-4b20-955e-7b428dead7c8">
+        <documentation />
+        <sourceRef>Id_ce1bae56-1612-4fa1-93b0-c19b953379fc</sourceRef>
+        <targetRef>Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation id="DataOutputAssociation_1gsdzp0">
+        <targetRef>DataObjectReference_1v8vlyf</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation id="DataOutputAssociation_1inhymt">
+        <targetRef>Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <parallelGateway id="Id_815a7451-3840-4c76-a039-d4368e4df413" name="" gatewayDirection="Diverging">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_41e11003-6155-43ab-bada-f5232375079d</incoming>
+      <outgoing>Id_1800df1e-35f4-4e2a-8df1-0086ec4fcbd3</outgoing>
+      <outgoing>Id_4df1301e-2712-447a-9f77-ca8efa333f8b</outgoing>
+    </parallelGateway>
+    <task id="Id_a6a47a71-e831-45c9-8383-f04f0d27a41a" name="Comunicar Partes Interessadas">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;a name="_dx_frag_StartFragment"&gt;&lt;/a&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Durante todas as etapas ou atividades da aplica&amp;ccedil;&amp;atilde;o do processo de gest&amp;atilde;o de riscos deve haver comunica&amp;ccedil;&amp;atilde;o informativa e consultiva entre a organiza&amp;ccedil;&amp;atilde;o e as partes interessadas, internas e externas, para:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;auxiliar a estabelecer o contexto apropriadamente e assegurar que as vis&amp;otilde;es e percep&amp;ccedil;&amp;otilde;es das partes interessadas, incluindo necessidades, suposi&amp;ccedil;&amp;otilde;es, conceitos e preocupa&amp;ccedil;&amp;otilde;es sejam identificadas, registradas e levadas em considera&amp;ccedil;&amp;atilde;o; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;auxiliar a assegurar que os riscos sejam identificados e analisados adequadamente, reunindo &amp;aacute;reas diferentes de especializa&amp;ccedil;&amp;atilde;o;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 36pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Symbol;font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;middot; &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;garantir que todos os envolvidos estejam cientes de seus pap&amp;eacute;is e responsabilidades, e avalizem e apoiem o tratamento dos riscos. Conv&amp;eacute;m que seja desenvolvido um plano de comunica&amp;ccedil;&amp;atilde;o e realizada consulta interna e externa para apoiar essa atividade, seja por meio de documento formal ou de lista de verifica&amp;ccedil;&amp;atilde;o. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Segundo a Pol&amp;iacute;tica de Gest&amp;atilde;o de Riscos, uma Matriz RACI deve ser criada, atualizada e divulgada para dar publicidade a esta Gest&amp;atilde;o de Risco.&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_4df1301e-2712-447a-9f77-ca8efa333f8b</incoming>
+      <outgoing>Id_13756e0c-1290-4bc6-9449-9d426f6d288d</outgoing>
+    </task>
+    <startEvent id="Id_ab19e888-3ab2-435f-8967-cc1485632f39" name="">
+      <documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;Este Processo se inciaia quando h&amp;aacute; a necessidade de se criar um novo Plano de Tratamento dos Riscos ou Atualizar um j&amp;aacute; existente.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:8pt;font-weight:normal;font-style:normal;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</documentation>
+      <outgoing>Id_41e11003-6155-43ab-bada-f5232375079d</outgoing>
+    </startEvent>
+    <sequenceFlow id="Id_1800df1e-35f4-4e2a-8df1-0086ec4fcbd3" sourceRef="Id_815a7451-3840-4c76-a039-d4368e4df413" targetRef="Id_fb177bd8-af0c-497e-a8ac-fac0e5093c36">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_86952a86-6b61-4fe3-954c-3a0a259beef5" sourceRef="Id_fb177bd8-af0c-497e-a8ac-fac0e5093c36" targetRef="Id_602bb177-a003-4925-8df2-c4e69d2d2645">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_02c21ef3-1d91-4855-aeb7-c82bba8e8129" sourceRef="Id_602bb177-a003-4925-8df2-c4e69d2d2645" targetRef="Id_728c3a50-c266-4182-9a3b-c3342b003db5">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_24e73458-2bd6-4b8b-9cc2-fd8c49fa1df8" sourceRef="Id_728c3a50-c266-4182-9a3b-c3342b003db5" targetRef="Id_58a12131-dbd5-4985-b2da-e9b3015a5c7f">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_38a4b6f0-f0a1-4821-bb4c-4a4b4c6acb32" sourceRef="Id_58a12131-dbd5-4985-b2da-e9b3015a5c7f" targetRef="Id_fa6295fe-8250-4228-9b2b-679cc0a7ff5b">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_a66497c5-ec5d-4409-b2df-ee4f76aa6bdd" sourceRef="Id_fa6295fe-8250-4228-9b2b-679cc0a7ff5b" targetRef="Id_2d60ae8d-8522-4c6a-8e41-a27b4e62ce41">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_13756e0c-1290-4bc6-9449-9d426f6d288d" sourceRef="Id_a6a47a71-e831-45c9-8383-f04f0d27a41a" targetRef="Id_2d60ae8d-8522-4c6a-8e41-a27b4e62ce41">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_251aff0f-b085-42dc-9282-872a2c6074bc" sourceRef="Id_2d60ae8d-8522-4c6a-8e41-a27b4e62ce41" targetRef="Id_48932a30-0374-4631-98d9-71b3988222c8">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_41e11003-6155-43ab-bada-f5232375079d" sourceRef="Id_ab19e888-3ab2-435f-8967-cc1485632f39" targetRef="Id_815a7451-3840-4c76-a039-d4368e4df413">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_4df1301e-2712-447a-9f77-ca8efa333f8b" sourceRef="Id_815a7451-3840-4c76-a039-d4368e4df413" targetRef="Id_a6a47a71-e831-45c9-8383-f04f0d27a41a">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <dataObjectReference id="DataObjectReference_1v8vlyf" name="Plano de Tratamento dos Riscos" dataObjectRef="DataObject_0te1vb1" />
+    <dataObject id="DataObject_0te1vb1" />
+    <parallelGateway id="Id_2d60ae8d-8522-4c6a-8e41-a27b4e62ce41" name="" gatewayDirection="Converging">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_a66497c5-ec5d-4409-b2df-ee4f76aa6bdd</incoming>
+      <incoming>Id_13756e0c-1290-4bc6-9449-9d426f6d288d</incoming>
+      <outgoing>Id_251aff0f-b085-42dc-9282-872a2c6074bc</outgoing>
+    </parallelGateway>
+    <endEvent id="Id_48932a30-0374-4631-98d9-71b3988222c8" name="">
+      <documentation />
+      <incoming>Id_251aff0f-b085-42dc-9282-872a2c6074bc</incoming>
+      <terminateEventDefinition id="TerminateEventDefinition_0pzq1hv" />
+    </endEvent>
+    <association id="Id_d25ab8ef-828e-4eba-988b-41261accd8ea" sourceRef="Id_fb177bd8-af0c-497e-a8ac-fac0e5093c36" targetRef="Id_4bf58e07-76f8-4c1e-ac11-3d8141783a89">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_a25196dd-c5d6-4eb3-ad7a-cee4ae6a2fa9" sourceRef="Id_fa6295fe-8250-4228-9b2b-679cc0a7ff5b" targetRef="Id_4239769d-a47c-4ef2-9078-48a446384796">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_05ecbd05-432f-448f-85b4-52fab5591528" sourceRef="Id_602bb177-a003-4925-8df2-c4e69d2d2645" targetRef="Id_9adff955-9f61-41bf-8b34-8ccb07177ea0">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_d5aaa0c7-64b2-4d9e-bf2a-8b06dba2324b" sourceRef="Id_728c3a50-c266-4182-9a3b-c3342b003db5" targetRef="Id_2d932a1d-57dc-4c4c-b3a4-62ae81db1f35">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_ad2248ca-e455-4c4e-9493-f5fa92e6e080" sourceRef="Id_9adff955-9f61-41bf-8b34-8ccb07177ea0" targetRef="Id_2d932a1d-57dc-4c4c-b3a4-62ae81db1f35">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_348f8eef-f765-4931-8673-4451ae200b80" sourceRef="Id_58a12131-dbd5-4985-b2da-e9b3015a5c7f" targetRef="Id_467fc466-7a41-4b13-8c8c-bc10eebc5205">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_e60f870c-b591-4b0d-ac56-6597f8b0a8ec" sourceRef="Id_2d932a1d-57dc-4c4c-b3a4-62ae81db1f35" targetRef="Id_467fc466-7a41-4b13-8c8c-bc10eebc5205">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_dd2c9fbc-5320-448a-a86d-4872ec589197" sourceRef="Id_467fc466-7a41-4b13-8c8c-bc10eebc5205" targetRef="Id_4239769d-a47c-4ef2-9078-48a446384796">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+    <association id="Id_cec020b0-00b7-4d66-8d8c-d8681a650a07" sourceRef="Id_4bf58e07-76f8-4c1e-ac11-3d8141783a89" targetRef="Id_9adff955-9f61-41bf-8b34-8ccb07177ea0">
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </association>
+  </process>
+  <collaboration id="Id_24c7c3b4-a219-4d2f-bcc0-1feccf39192b" name="Diagrama 1">
+    <documentation />
+    <participant id="Id_28717915-828a-4fa5-bd5a-466df3858b22" name="Gerenciamento de Risco - Criar Plano de Tratamento dos Riscos" processRef="Id_287a32db-0590-4d1a-8f6b-9d37836a7d2f">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </participant>
+  </collaboration>
+  <BPMNDiagram xmlns="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Diagram_1c611ed8-9191-4c31-bd59-1aff29457746">
+    <BPMNPlane id="DiagramElement_ffa97ce7-1c62-4ecb-b381-b0da57b35c93" bpmnElement="Id_24c7c3b4-a219-4d2f-bcc0-1feccf39192b">
+      <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+      <BPMNShape id="DiagramElement_acb3cced-15bf-41bb-842d-ac4dfc69f12f" bpmnElement="Id_28717915-828a-4fa5-bd5a-466df3858b22" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="160" y="80" width="1061" height="340" />
+        <BPMNLabel id="DiagramElement_ba2f1546-5466-44fd-9ddc-2a10defa42ff" labelStyle="Style_7f81365b-ca4b-44e3-ad89-def177486868">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_e2c07f6b-34b6-496c-b5b7-f92a77ce87ff" bpmnElement="Id_bcfd5bbe-7fe8-4527-ac4e-5047125a2367">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="534" y="95" width="50" height="50" />
+        <BPMNLabel>
+          <dc:Bounds x="425" y="113" width="90" height="27" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_d89be8ed-a725-4e39-bf50-081b8f603b34" bpmnElement="Id_fb177bd8-af0c-497e-a8ac-fac0e5093c36">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="388" y="191" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_931ba80a-c9bf-4569-8c5d-d337e923ecfd" labelStyle="Style_7aafc04f-1bcc-4679-9ad0-3c3ceb6dad72">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="130" y="50" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_1e2617df-61c0-4d9f-a1b7-2ce321546e66" bpmnElement="Id_602bb177-a003-4925-8df2-c4e69d2d2645">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="514" y="191" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_568d352d-068f-4a92-a1d7-d696137c43c5" labelStyle="Style_65e84e20-a925-4169-a049-38f90b5acbdb">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="130.33331298828125" y="50" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_da70b51e-4b18-43db-ab76-0ff225655ec9" bpmnElement="Id_728c3a50-c266-4182-9a3b-c3342b003db5">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="639" y="191" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_132158a2-a575-4504-9309-cfdd107a5b25" labelStyle="Style_4455be69-0050-4aa0-80e1-9dad2dee945f">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="129.66665649414062" y="50" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_896053c1-4181-41c1-bdbb-824584709132" bpmnElement="Id_58a12131-dbd5-4985-b2da-e9b3015a5c7f">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="765" y="191" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_e088d18a-76da-47d6-91c2-52a6bd6e40df" labelStyle="Style_4eb94a5a-90bc-4040-a11e-408670a8bb6c">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="130" y="50" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_8630a95f-78eb-4561-a5e9-1797ce0add9b" bpmnElement="Id_fa6295fe-8250-4228-9b2b-679cc0a7ff5b">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="902" y="191" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_cda4ea26-1a6a-4723-97f8-c89dd5971a20" labelStyle="Style_fa648410-6870-4a3f-be31-c2e34a85b8df">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="130" y="50" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_17b8eff9-ca4a-4133-b3df-53e996cd4ab2" bpmnElement="Id_815a7451-3840-4c76-a039-d4368e4df413">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="313" y="201" width="40" height="40" />
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_29ebfdf8-fd65-4093-9767-f2862d45b3d0" bpmnElement="Id_a6a47a71-e831-45c9-8383-f04f0d27a41a">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="639" y="330" width="90" height="60" />
+        <BPMNLabel id="DiagramElement_e6d71d32-7b26-40ed-9e55-ecec3f5a549b" labelStyle="Style_683bcbcb-4279-418c-9be8-e4fa3dd80e59">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="130" y="-93" width="90" height="60" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="Event_0eim3qy_di" bpmnElement="Id_ab19e888-3ab2-435f-8967-cc1485632f39">
+        <dc:Bounds x="239" y="206" width="36" height="36" />
+      </BPMNShape>
+      <BPMNShape id="DataObjectReference_1v8vlyf_di" bpmnElement="DataObjectReference_1v8vlyf">
+        <dc:Bounds x="1102" y="95" width="36" height="50" />
+        <BPMNLabel>
+          <dc:Bounds x="1082" y="152" width="77" height="40" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_4c0d623d-7aad-461b-ba72-443c055abb9a" bpmnElement="Id_2d60ae8d-8522-4c6a-8e41-a27b4e62ce41">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="1087" y="260" width="40" height="40" />
+      </BPMNShape>
+      <BPMNShape id="Event_1yycmcc_di" bpmnElement="Id_48932a30-0374-4631-98d9-71b3988222c8">
+        <dc:Bounds x="1155" y="265" width="36" height="36" />
+      </BPMNShape>
+      <BPMNEdge id="DiagramElement_64690a61-c6df-4317-a11b-6a8cd43eaad9" bpmnElement="Id_1800df1e-35f4-4e2a-8df1-0086ec4fcbd3">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="353" y="221" />
+        <di:waypoint x="388" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_1ccfd962-de74-4f23-b83c-abc0884a59e2" bpmnElement="Id_86952a86-6b61-4fe3-954c-3a0a259beef5">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="478" y="221" />
+        <di:waypoint x="514" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_0391a7a4-43b3-4b10-9c7d-0a6b450df6d5" bpmnElement="Id_02c21ef3-1d91-4855-aeb7-c82bba8e8129">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="604" y="221" />
+        <di:waypoint x="639" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_1fc9f6d4-3098-460d-9b49-7c6910a95867" bpmnElement="Id_24e73458-2bd6-4b8b-9cc2-fd8c49fa1df8">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="729" y="221" />
+        <di:waypoint x="765" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_e510ac79-4b25-4d63-be5c-2c17c30dc982" bpmnElement="Id_38a4b6f0-f0a1-4821-bb4c-4a4b4c6acb32">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="855" y="221" />
+        <di:waypoint x="902" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_9049382a-3e8b-41a1-a8b3-3c4c0c3357e3" bpmnElement="Id_a66497c5-ec5d-4409-b2df-ee4f76aa6bdd">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="992" y="221" />
+        <di:waypoint x="1107" y="221" />
+        <di:waypoint x="1107" y="260" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_0968c6af-0645-4727-9228-60f25db6183f" bpmnElement="Id_13756e0c-1290-4bc6-9449-9d426f6d288d">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="729" y="366" />
+        <di:waypoint x="1107" y="366" />
+        <di:waypoint x="1107" y="300" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_3e854efe-cb84-4a0e-a81f-09b27b2640b1" bpmnElement="Id_251aff0f-b085-42dc-9282-872a2c6074bc">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="1127" y="280" />
+        <di:waypoint x="1155" y="280" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_7093746e-e004-4dd1-9f84-7fa4b572dba0" bpmnElement="Id_41e11003-6155-43ab-bada-f5232375079d">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="275" y="221" />
+        <di:waypoint x="313" y="221" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_b60a7b7f-cd0a-4502-bd33-eaf84203fd6d" bpmnElement="Id_4df1301e-2712-447a-9f77-ca8efa333f8b">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <di:waypoint x="333" y="241" />
+        <di:waypoint x="333" y="367" />
+        <di:waypoint x="639" y="367" />
+      </BPMNEdge>
+      <BPMNEdge id="DataOutputAssociation_0zyj0dd_di" bpmnElement="DataOutputAssociation_0zyj0dd">
+        <di:waypoint x="559" y="191" />
+        <di:waypoint x="560" y="145" />
+      </BPMNEdge>
+      <BPMNEdge id="DataOutputAssociation_1gsdzp0_di" bpmnElement="DataOutputAssociation_1gsdzp0">
+        <di:waypoint x="960" y="191" />
+        <di:waypoint x="960" y="120" />
+        <di:waypoint x="1102" y="120" />
+      </BPMNEdge>
+      <BPMNEdge id="DataOutputAssociation_1inhymt_di" bpmnElement="DataOutputAssociation_1inhymt">
+        <di:waypoint x="930" y="191" />
+        <di:waypoint x="930" y="125" />
+        <di:waypoint x="584" y="125" />
+      </BPMNEdge>
+    </BPMNPlane>
+    <BPMNLabelStyle id="Style_c8893f1f-40c7-4e3b-88ed-3123d09e1404">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_7f81365b-ca4b-44e3-ad89-def177486868">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_bbbac200-1640-44da-948c-5ac128818ec8">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_d1329dd2-f033-4840-aefc-5bdb564904e6">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_105148fa-f9cb-439b-9506-61fe928dc738">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_d8b53703-eaf7-42be-9e87-6fe480d5da48">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_be04124e-c345-4b35-abe7-aea159b7adb5">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_7aafc04f-1bcc-4679-9ad0-3c3ceb6dad72">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_65e84e20-a925-4169-a049-38f90b5acbdb">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_4455be69-0050-4aa0-80e1-9dad2dee945f">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_4eb94a5a-90bc-4040-a11e-408670a8bb6c">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_fa648410-6870-4a3f-be31-c2e34a85b8df">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_683bcbcb-4279-418c-9be8-e4fa3dd80e59">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_427e547c-4224-4f71-b509-dea86ebd3a30">
+      <Font xmlns="http://www.omg.org/spec/DD/20100524/DC" name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </BPMNLabelStyle>
+  </BPMNDiagram>
+</definitions>
