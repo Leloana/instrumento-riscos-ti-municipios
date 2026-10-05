@@ -7,6 +7,7 @@ para órgãos municipais e cidades inteligentes.
 |---|---|
 | [`questionario/`](questionario/) | o questionário aplicado nos órgãos: 134 itens, uma Seção 0 obrigatória e 22 seções abertas por pergunta de triagem |
 | [`catalogo/`](catalogo/) | o catálogo dos 134 riscos (94 de TI em geral e 40 de cidades inteligentes), com probabilidade, impacto, triagem, calibração e referências normativas |
+| [`avaliacao/`](avaliacao/) | as notas dos cinco especialistas às sete afirmações sobre os requisitos de desenho (escala de 1 a 5), com mediana e concordância por afirmação |
 | [`processos/`](processos/) | dois processos em BPMN que dão sequência ao diagnóstico: criar o plano de tratamento dos riscos, e implantá-lo e monitorá-lo |
 
 ## Processos
